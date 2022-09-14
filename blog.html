@@ -87,7 +87,11 @@
                             </div>
                             <div class="col-md-6 ps-3">
                                 <h5><strong>Block Scope:</strong></h5>
-                                <p>Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}. This block of code is itself inside a function.</p>
+                                <p>Block scope is also a sub-type of local scope. The block scope can be defined as the
+                                    scope of the variables inside the curly brackets {}. Now, these curly brackets can
+                                    be of loops, or conditional statements, or something else. You are only allowed to
+                                    refer to these variables from within the curly brackets {}. This block of code is
+                                    itself inside a function.</p>
                                 <pre>
                                     function addition() {
                                         {
@@ -111,12 +115,55 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
+                        <p>There are some ways to indentify undefined.</p>
+                        <p>1. Undefined represents the value of a variable that hasn't been yet initialized, while null represents an intentional absence of an object. Let's explore the difference in some examples. The variable number is defined, however, is not assigned with an initial value:
+                        <pre>
+                                let number;
+                            number; // => undefined
+
+                            const obj = { firstName: 'Dmitri' };
+                            obj.lastName; // => undefined
+                            </pre> <pre>
+                            const student = {
+                             id: 21,
+                             name: 'Alamin',
+                             address: 'Dhaka',
+                             age: 20
+                              } 
+                             console.log(student.phone)// => undefined</pre>
+                        </p>
+                        <p>2. You get undefined when accessing an array element with an out of bounds index
+                        <pre>
+                            onst colors = ['blue', 'white', 'red'];
+                            colors[5];  // => undefined
+                            colors[-1]; // => undefined</pre>
+                        </p>
+                        <p>3. Implicitly, without return statement, a JavaScript function returns undefined
+                        <pre>
+                            function square(x) {
+                            const res = x * x;
+                          }
+                          square(2); // => undefined</pre>
+                        </p>
+                        <p>4. Sometimes a function does not require the full set of arguments on invocation. You can set defaults for parameters that don't have a value.
+                        <pre>
+                            function myFun(x, y) {
+                            return  x + y;
+                          }
+                          myFun(2); // => undefined</pre>
+                        </p>
+                        <p>5. If return has nothing on the constion that will return undefined.
+                        <pre>
+                            function ifNegative(x, y) {
+                            if(x < 0 || y < 0){
+                                return 
+                            }
+                            return x + y;
+                          }
+                          const result = ifNegative(2, -8);
+                          console.log( result)// => undefined</pre>
+                        </p>
+                        
                     </div>
                 </div>
             </div>

@@ -22,11 +22,13 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
-
+  
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
+    errorCount++;
     return display.removeChild(display.lastChild);
+    
   }
 
   // these are the valid character we are allowing to type
@@ -38,6 +40,7 @@ const typeController = (e) => {
     return;
   }
 
+  
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
