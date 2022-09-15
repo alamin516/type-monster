@@ -134,12 +134,12 @@ startBtn.addEventListener("click", start);
 // If history exists, show it
 displayHistory();
 
+
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
   const timeSpentInt = parseInt(timeSpent)
-
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpentInt : 0} seconds`;
   

@@ -17,157 +17,132 @@
 <body>
     <h1 class="title">Blog Page</h1>
     <div class="container ">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item bg-dark text-white">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button bg-success text-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Difference Between localStorage and sessionStorage
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-md-6 border-end">
-                                <h5><strong>localStorage:</strong></h5>
-                                <p>The localStorage is an object that helps to store data with no expiration date.
-                                    Therefore, this data will not be deleted even the browser is closed. In other words,
-                                    the user can access a page’s local storage without any time limit. So, it is
-                                    possible to obtain data the next day or after a week or a year.</p>
-                                <pre>Refer to the below code.
+        <div class="row">
+            <div class="col-md-12 text-white blog mb-4">
+                <h2>Q. Difference Between localStorage and sessionStorage </h2>
+                <h4>localStorage:</h4>
+                <h5>The localStorage is an object that helps to store data with no expiration date.
+                    Therefore, this data will not be deleted even the browser is closed. In other words,
+                    the user can access a page’s local storage without any time limit. So, it is
+                    possible to obtain data the next day or after a week or a year.</h5>
+                <pre>Refer to the below code.
 
-                      localStorage.setItem(“key”, “value”);
-                      localStorage.getItem('key');
-                      localStorage.removeItem(“key”);
-                      localStorage.clear();</pre>
-                            </div>
-                            <div class="col-md-6 ps-3">
-                                <h5><strong>sessionStorage:</strong></h5>
-                                <p>The functionality of the sessionStorage is similar to localStorage, but it stores
-                                    data only for one session. Therefore, the data is deleted when the user closes the
-                                    browser tab. So, it helps to add data to the session storage. It is possible to
-                                    access it by any page from the same site opened in that window. Once the user closes
-                                    the window, the session is lost. Likewise, the sessionStorage object allows string
-                                    data of a specific session.</p>
-                                <pre>Refer to the below code.
+      localStorage.setItem(“key”, “value”);
+      localStorage.getItem('key');
+      localStorage.removeItem(“key”);
+      localStorage.clear();</pre>
 
-                                    localStorage.setItem(“key”, “value”);
-                                    localStorage.getItem('key');
-                                    localStorage.removeItem(“key”);
-                                    localStorage.clear();</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h4>sessionStorage:</h4>
+                <h5>The functionality of the sessionStorage is similar to localStorage, but it stores
+                    data only for one session. Therefore, the data is deleted when the user closes the
+                    browser tab. So, it helps to add data to the session storage. It is possible to
+                    access it by any page from the same site opened in that window. Once the user closes
+                    the window, the session is lost. Likewise, the sessionStorage object allows string
+                    data of a specific session.</h5>
+                <pre>Refer to the below code.
+
+        sessionStorage.setItem(“key”, “value”);
+        sessionStorage.getItem('key');
+        sessionStorage.removeItem(“key”);
+        sessionStorage.clear();</pre>
             </div>
-            <div class="accordion-item bg-dark text-white">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Difference Between Global Scope and Block Scope
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-md-6 border-end">
-                                <h5><strong>Global Scope:</strong></h5>
-                                <p>The variables defined outside of any function or curly brackets are known as global
-                                    variables and have global scope. Global scope means that the variables can be
-                                    accessed from any part of that program, any function or conditional state can access
-                                    that variable.</p>
-                                <pre>var name = "Md Alamin";
-    function globalScope(){
-    console.log("This tutorial is by "+name);
-    }
-                                    
-    globalScope();</pre>
-                            </div>
-                            <div class="col-md-6 ps-3">
-                                <h5><strong>Block Scope:</strong></h5>
-                                <p>Block scope is also a sub-type of local scope. The block scope can be defined as the
-                                    scope of the variables inside the curly brackets {}. Now, these curly brackets can
-                                    be of loops, or conditional statements, or something else. You are only allowed to
-                                    refer to these variables from within the curly brackets {}. This block of code is
-                                    itself inside a function.</p>
-                                <pre>
-                                    function addition() {
-                                        {
-                                          let a = 10;
-                                          const b = 5;
-                                        }
-                                      }
+            <div class="col-md-12 text-white blog mb-4">
+                <h2>Q. Difference Between Global Scope and Block Scope</h2>
+                <h4>Global Scope:</h4>
+                <h5>The variables defined outside of any function or curly brackets are known as global
+                    variables and have global scope. Global scope means that the variables can be
+                    accessed from any part of that program, any function or conditional state can access
+                    that variable.</h5>
+                <pre>
+        var name = "Md Alamin";
+        function globalScope(){
+        console.log("This tutorial is by "+name);
+          }
+        globalScope();</pre>
+
+                <h4>Block Scope:</h4>
+                Block scope is also a sub-type of local scope. The block scope can be defined as the
+                scope of the variables inside the curly brackets {}. Now, these curly brackets can
+                be of loops, or conditional statements, or something else. You are only allowed to
+                refer to these variables from within the curly brackets {}. This block of code is
+                itself inside a function.</h5>
+                <pre>
+        function addition() {
+           let a = 10;
+            const b = 5;
+        }
                                 </pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="accordion-item bg-dark text-white">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        How many ways we can get undefined in Javascript?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>There are some ways to indentify undefined.</p>
-                        <p>1. Undefined represents the value of a variable that hasn't been yet initialized, while null represents an intentional absence of an object. Let's explore the difference in some examples. The variable number is defined, however, is not assigned with an initial value:
-                        <pre>
-                                let number;
-                            number; // => undefined
+            <div class="col-md-12 text-white blog mb-4">
+                <h2>Q. What is an event loop in JavaScript?</h2>
+                <h5>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all
+                    operations on a single thread, but using a few smart data structures, it gives us the illusion of
+                    multi-threading. Let’s take a look at what happens on the back-end.
 
-                            const obj = { firstName: 'Dmitri' };
-                            obj.lastName; // => undefined
-                            </pre> <pre>
-                            const student = {
-                             id: 21,
-                             name: 'Alamin',
-                             address: 'Dhaka',
-                             age: 20
-                              } 
-                             console.log(student.phone)// => undefined</pre>
-                        </p>
-                        <p>2. You get undefined when accessing an array element with an out of bounds index
-                        <pre>
-                            onst colors = ['blue', 'white', 'red'];
-                            colors[5];  // => undefined
-                            colors[-1]; // => undefined</pre>
-                        </p>
-                        <p>3. Implicitly, without return statement, a JavaScript function returns undefined
-                        <pre>
-                            function square(x) {
-                            const res = x * x;
-                          }
-                          square(2); // => undefined</pre>
-                        </p>
-                        <p>4. Sometimes a function does not require the full set of arguments on invocation. You can set defaults for parameters that don't have a value.
-                        <pre>
-                            function myFun(x, y) {
-                            return  x + y;
-                          }
-                          myFun(2); // => undefined</pre>
-                        </p>
-                        <p>5. If return has nothing on the constion that will return undefined.
-                        <pre>
-                            function ifNegative(x, y) {
-                            if(x < 0 || y < 0){
-                                return 
-                            }
-                            return x + y;
-                          }
-                          const result = ifNegative(2, -8);
-                          console.log( result)// => undefined</pre>
-                        </p>
-                        
-                    </div>
-                </div>
+                    The call stack is responsible for keeping track of all the operations in line to be executed.
+                    Whenever a function is finished, it is popped from the stack.
+                    The event queue is responsible for sending new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.
+                </h5>
+
+            </div>
+            <div class="col-md-12 text-white blog mb-4">
+                <h2>Q. How many ways we can get undefined in Javascript?</h2>
+                <h5>1. Undefined represents the value of a variable that hasn't been yet initialized, while null
+                    represents an intentional absence of an object. Let's explore the difference in some examples.
+                    The variable number is defined, however, is not assigned with an initial value:
+                    <pre>
+        let number;
+        number; // => undefined
+
+        const obj = { firstName: 'Dmitri' };
+        bj.lastName; // => undefined
+                            </pre>
+                    <pre>
+        const student = {
+            id: 21,
+            name: 'Alamin',
+            address: 'Dhaka',
+            age: 20
+        } 
+        console.log(student.phone)// => undefined</pre>
+                </h5>
+                <h5>2. You get undefined when accessing an array element with an out of bounds index
+                    <pre>
+        const colors = ['blue', 'white', 'red'];
+            colors[5];  // => undefined
+            colors[-1]; // => undefined</pre>
+                </h5>
+                <h5>3. Implicitly, without return statement, a JavaScript function returns undefined
+                    <pre>
+        function myFun(x) {
+            const res = x * x;
+        }
+        myFun(2); // => undefined</pre>
+                </h5>
+                <h5>4. Sometimes a function does not require the full set of arguments on invocation. You can set
+                    defaults for parameters that don't have a value.
+                    <pre>
+        function myFun(x, y) {
+            return  x + y;
+        }
+        myFun(2); // => undefined</pre>
+                </h5>
+                <h5>5. If return has nothing on the constion that will return undefined.
+                    <pre>
+        function ifNegative(x, y) {
+            if(x < 0 || y < 0){
+                return 
+            }
+            return x + y;
+         }
+         const result = ifNegative(2, -8);
+         console.log( result)// => undefined</pre>
+                </h5>
+
             </div>
         </div>
+
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
